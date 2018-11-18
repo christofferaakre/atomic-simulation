@@ -57,7 +57,7 @@ def direction_vector(point1, point2):
 def electric_force(obj1, obj2):
     length = k * obj1['charge'] * \
         obj2['charge'] / ((distance(obj1, obj2)) ** 2)
-    force_vector = scale_vector(direction_vector(obj1, obj2), -length)
+    force_vector = scale_vector(direction_vector(obj2, obj1), length)
     return force_vector
 
 
